@@ -1,0 +1,12 @@
+C:\Users\lf202\Desktop\PoliSchool\PoliSchool\PoliSchool.DAL\bin\Debug\net6.0\PoliSchool.DAL.deps.json
+C:\Users\lf202\Desktop\PoliSchool\PoliSchool\PoliSchool.DAL\bin\Debug\net6.0\PoliSchool.DAL.dll
+C:\Users\lf202\Desktop\PoliSchool\PoliSchool\PoliSchool.DAL\bin\Debug\net6.0\PoliSchool.DAL.pdb
+C:\Users\lf202\Desktop\PoliSchool\PoliSchool\PoliSchool.DAL\obj\Debug\net6.0\PoliSchool.DAL.csproj.AssemblyReference.cache
+C:\Users\lf202\Desktop\PoliSchool\PoliSchool\PoliSchool.DAL\obj\Debug\net6.0\PoliSchool.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lf202\Desktop\PoliSchool\PoliSchool\PoliSchool.DAL\obj\Debug\net6.0\PoliSchool.DAL.AssemblyInfoInputs.cache
+C:\Users\lf202\Desktop\PoliSchool\PoliSchool\PoliSchool.DAL\obj\Debug\net6.0\PoliSchool.DAL.AssemblyInfo.cs
+C:\Users\lf202\Desktop\PoliSchool\PoliSchool\PoliSchool.DAL\obj\Debug\net6.0\PoliSchool.DAL.csproj.CoreCompileInputs.cache
+C:\Users\lf202\Desktop\PoliSchool\PoliSchool\PoliSchool.DAL\obj\Debug\net6.0\PoliSchool.DAL.dll
+C:\Users\lf202\Desktop\PoliSchool\PoliSchool\PoliSchool.DAL\obj\Debug\net6.0\refint\PoliSchool.DAL.dll
+C:\Users\lf202\Desktop\PoliSchool\PoliSchool\PoliSchool.DAL\obj\Debug\net6.0\PoliSchool.DAL.pdb
+C:\Users\lf202\Desktop\PoliSchool\PoliSchool\PoliSchool.DAL\obj\Debug\net6.0\ref\PoliSchool.DAL.dll
