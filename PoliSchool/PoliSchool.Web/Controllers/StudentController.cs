@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.ChangeTracking.Internal;
+using PoliSchool.DAL.Entities;
 using PoliSchool.DAL.Interfaces;
 using PoliSchool.Web.Models;
 
@@ -58,6 +60,15 @@ namespace PoliSchool.Web.Controllers
         {
             try
             {
+                Student studentToAdd = new Student()
+                {
+                    LastName = studentView.LastName,
+                    FirstName = studentView.FirstName,
+                    EnrollmentDate = studentView.EnrollmentDate,
+                    CreationDate = DateTime.Now,
+                    UserMod = 1
+                };
+                this.studentDao.SaveStudent(studentToAdd);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -88,6 +99,18 @@ namespace PoliSchool.Web.Controllers
         {
             try
             {
+                Student studentToUpdate = new Student 
+                { 
+                    Id = studentView.Id,
+                    FirstName = studentView.FirstName,
+                    LastName = studentView.LastName,
+                    EnrollmentDate= studentView.EnrollmentDate,
+                    ModifyDate = DateTime.Now,
+                    UserMod = 1
+                };
+
+                this.studentDao.UpdateStudent(studentToUpdate);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
