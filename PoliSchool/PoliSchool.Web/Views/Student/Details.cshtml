@@ -1,0 +1,35 @@
+﻿@model PoliSchool.Web.Models.StudentListModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h3>Detalles del estudiante: @Model.Name</h3>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Codigo
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+        <dt class = "col-sm-2">
+            Nombre
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+        <dt class = "col-sm-2">
+            Fecha de inscripción
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.EnrollmentDate)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Editar", "Edit", new {  id = Model.Id  }) |
+    <a asp-action="Index">Regresar</a>
+</div>
