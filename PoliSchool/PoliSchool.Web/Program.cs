@@ -14,6 +14,8 @@ builder.Services.AddDbContext<SchoolDbContext>(options => options.UseSqlServer(b
 //Agregar DAOs
 builder.Services.AddTransient<IStudentDao, StudentDao>();
 builder.Services.AddTransient<IInstructorDao, InstructorDao>();
+builder.Services.AddTransient<IDepartmentDao, DepartmentDao>();
+builder.Services.AddTransient<ICourseDao, CourseDao>();
 
 var app = builder.Build();
 

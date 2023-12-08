@@ -1,0 +1,64 @@
+﻿@model IEnumerable<PoliSchool.Web.Models.CourseListModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Cursos</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Codigo Curso
+            </th>
+            <th>
+                 Curso
+            </th>
+            <th>
+                Creditos
+            </th>
+            <th>
+                Codigo Departamento
+            </th>
+            <th>
+                Departamento
+            </th>
+            <th>
+                Fecha
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Credits)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartmentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CreationDateDisplay)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.CourseId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.CourseId }) |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

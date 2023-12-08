@@ -52,10 +52,21 @@ namespace PoliSchool.Web.Controllers
         // POST: InstructorController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(InstructorViewModel instructorView)
         {
             try
             {
+                Instructor instructorToAdd = new Instructor()
+                {
+                    LastName = instructorView.LastName,
+                    FirstName = instructorView.FirstName,
+                    HireDate = instructorView.HireDate,
+                    CreationDate = DateTime.Now,
+                    CreationUser = 1
+                };
+
+                this.instructorDao.SaveInstructor(instructorToAdd);
+
                 return RedirectToAction(nameof(Index));
             }
             catch
