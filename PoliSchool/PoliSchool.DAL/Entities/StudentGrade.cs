@@ -1,12 +1,13 @@
 ﻿
 
+using PoliSchool.DAL.Core;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PoliSchool.DAL.Entities
 {
     [Table("StudentGrade")]
-    public class StudentGrade
+    public class StudentGrade 
     {
         [Key]
         public int EnrollmentId { get; set; }

@@ -24,6 +24,7 @@ namespace PoliSchool.Web.Controllers
                 HireDateDisplay = cd.HireDateDisplay,
                 Id = cd.Id,
                 Name = cd.Name,
+                
             }).ToList();
 
             return View(instructors);   

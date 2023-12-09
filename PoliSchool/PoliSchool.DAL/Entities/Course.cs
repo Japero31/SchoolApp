@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PoliSchool.DAL.Entities
 {
+    [Table ("Course")]
     public class Course : BaseEntity
     {
 

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\PoliSchool.WebCourse.props" />
+</Project>

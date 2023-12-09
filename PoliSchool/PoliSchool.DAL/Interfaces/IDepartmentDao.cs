@@ -10,6 +10,11 @@ namespace PoliSchool.DAL.Interfaces
 {
     public interface IDepartmentDao
     {
+        void SaveDepartment(Department department);
+        void UpdateDepartment(Department department);
+        void RemoveDepartment(Department department);
+
+        DepartmentModel GetDepartmentById(int DepartmentId);
         List<DepartmentModel> GetDepartments();
        
     }

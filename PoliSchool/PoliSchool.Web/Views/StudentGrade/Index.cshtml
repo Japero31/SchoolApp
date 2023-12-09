@@ -1,0 +1,52 @@
+﻿@model IEnumerable<PoliSchool.Web.Models.StudentGradeListModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Calificaciones</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Codigo de Inscipcion
+            </th>
+            <th>
+               Codigo de Estudiante
+            </th>
+            <th>
+                Codigo de Curso
+            </th>
+            <th>
+                Calificaciones
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.EnrollmentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StudentId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Grade)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.EnrollmentId}) |
+                @Html.ActionLink("Details", "Details", new { id=item.EnrollmentId }) |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

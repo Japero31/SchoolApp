@@ -1,6 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using PoliSchool.WebCourse.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+// Agregar conexion de la base datos.
+builder.Services.AddDbContext<SchoolContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("SchoolDbContext")));
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

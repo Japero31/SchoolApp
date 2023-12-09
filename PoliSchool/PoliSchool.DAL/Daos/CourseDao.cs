@@ -50,6 +50,7 @@ namespace PoliSchool.DAL.Daos
                                 CreationDate = cou.CreationDate,
                                 CourseId = cou.CourseId,
                                 Name = string.Concat(cou.Title, " "),
+                                Credits = cou.Credits,
                                 DepartmentName = dep.Name,
                                 DepartmentId = dep.DepartmentId,
                             };
@@ -113,6 +114,7 @@ namespace PoliSchool.DAL.Daos
                 courseToUpdate.CourseId = course.CourseId;
                 courseToUpdate.Title = course.Title;
                 courseToUpdate.Credits = course.Credits;
+                courseToUpdate.CreationDate = course.CreationDate;
 
                 this.schoolDb.Courses.Update(courseToUpdate);
                 this.schoolDb.SaveChanges();
