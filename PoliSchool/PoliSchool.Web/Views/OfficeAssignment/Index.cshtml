@@ -1,0 +1,40 @@
+﻿@model IEnumerable<PoliSchool.Web.Models.OfficeAssignmentListModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Asignacion de oficinas</h3>
+
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Codigo de Instructor
+            </th>
+            <th>
+                Ubicación
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.InstructorId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.InstructorId }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.InstructorId  }) |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,30 @@
+﻿@model PoliSchool.Web.Models.OfficeAssignmentListModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h3>Detalles</h3>
+
+<div>
+    <h4>OfficeAssignmentListModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            Codigo del Instructor
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.InstructorId)
+        </dd>
+        <dt class = "col-sm-2">
+            Ubicacion
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Location)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new {  id = Model.InstructorId }) |
+    <a asp-action="Index">Regresar</a>
+</div>

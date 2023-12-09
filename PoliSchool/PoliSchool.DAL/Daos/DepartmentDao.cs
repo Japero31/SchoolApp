@@ -44,16 +44,27 @@ namespace PoliSchool.DAL.Daos
 
         public List<DepartmentModel> GetDepartments()
         {
-            var deptos = this.schoolDb.Departments.Where(depto => !depto.Deleted).Select(deptos => new DepartmentModel()
+            List<DepartmentModel> departments = new List<DepartmentModel>();
+            try
             {
-                DepartmentId = deptos.DepartmentId,
-                Name = deptos.Name,
-                Budget = deptos.Budget,
-                Administrator = deptos.Administrator.Value,
-                StartDate = deptos.StartDate,
-            }).ToList();
+                var query = from dep in this.schoolDb.Departments
+                            select new DepartmentModel()
+                            {
+                                Name = dep.Name,
+                                DepartmentId = dep.DepartmentId,
+                                Budget = dep.Budget,
+                                Administrator = dep.Administrator.Value,
+                                StartDate = dep.StartDate,
+                               
 
-            return deptos;
+                            };
+
+                departments = query.ToList();
+            }catch (Exception ex)
+            {
+                throw new DepartmentDaoException(ex.Message);
+            }
+            return departments;
         }
 
         public void RemoveDepartment(Department department)

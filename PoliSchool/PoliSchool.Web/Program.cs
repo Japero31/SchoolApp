@@ -17,6 +17,7 @@ builder.Services.AddTransient<IInstructorDao, InstructorDao>();
 builder.Services.AddTransient<IDepartmentDao, DepartmentDao>();
 builder.Services.AddTransient<ICourseDao, CourseDao>();
 builder.Services.AddTransient<IStudentGradeDao, StudentGradeDao>();
+builder.Services.AddTransient<IOfficeAssignmentDao, OfficeAssignmentDao>();
 
 var app = builder.Build();
 
