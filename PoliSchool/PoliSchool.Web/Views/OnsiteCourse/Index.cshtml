@@ -1,0 +1,54 @@
+﻿@model IEnumerable<PoliSchool.Web.Models.OnsiteCourseListModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>Cursos Presenciales</h3>
+
+<p>
+    <a asp-action="Create">Agregar</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Codigo curso
+            </th>
+            <th>
+               Ubicacion
+            </th>
+            <th>
+                Dias
+            </th>
+
+            <th>
+                Tiempo
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.CourseId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Days)
+            </td>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeDisplay)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.CourseId }) |
+                    @Html.ActionLink("Details", "Details", new { id=item.CourseId }) |
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

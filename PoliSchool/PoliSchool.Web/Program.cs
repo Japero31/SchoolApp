@@ -18,6 +18,11 @@ builder.Services.AddTransient<IDepartmentDao, DepartmentDao>();
 builder.Services.AddTransient<ICourseDao, CourseDao>();
 builder.Services.AddTransient<IStudentGradeDao, StudentGradeDao>();
 builder.Services.AddTransient<IOfficeAssignmentDao, OfficeAssignmentDao>();
+builder.Services.AddTransient<IOnlineCourseDao, OnlineCourseDao>();
+builder.Services.AddTransient<IOnsiteCourseDao, OnsiteCourseDao>();
+
+
+
 
 var app = builder.Build();
 
